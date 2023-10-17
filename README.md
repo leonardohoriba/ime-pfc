@@ -25,13 +25,17 @@ senha: RicardoFranco2023
 
 ## Para testar rodar dentro de um conteiner docker local
 Verifique se o deamon do docker está ligado 
+Para rodar local:
+db_url = "postgresql://marin:marin@35.247.250.121:5432/postgres"
+
 1 - docker build -t gcr.io/pfcime/backend   .
 
 2 - docker run -dp 8000:8000 -e PORT=8000 gcr.io/pfcime/backend
 ## Para dar deploy ao app no google cloud na conta utilizada durante o trabalho 
 O pagamento da conta foi encerrado dia 20/10/2023, portanto, será necessário cadastro de nova forma de pagamento para 
 que o ambiente em cloud volte a ficar ativo
-
+Para rodar em nuvem:
+db_url = "postgresql://marin:marin@10.119.113.3:5432/postgres"
 
 1 - gcloud builds submit --tag gcr.io/pfcime/backend  
 
